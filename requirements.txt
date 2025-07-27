@@ -1,0 +1,33 @@
+# Core Libraries
+numpy>=1.22,<1.24                 # Compatible with TF 2.12 & Python 3.8
+pandas==1.5.3                     # Last pandas version officially tested with Python 3.8
+
+# Visualization
+matplotlib==3.7.5                # Last version supporting Python 3.8
+seaborn==0.13.2                  # Compatible with matplotlib 3.7.5
+wordcloud==1.9.3
+
+# Machine Learning
+lightgbm==4.5.0                  # Latest stable release as of mid-2025
+joblib==1.4.2
+
+# NLP
+nltk==3.9.1
+
+# Web Framework
+Flask==3.0.3
+Flask_Cors==5.0.0
+
+# ML Lifecycle
+mlflow==2.17.0                   # Compatible with Python 3.8 and stable
+boto3==1.35.36
+
+# DVC (Data Version Control) with S3 support
+dvc==3.42.0
+dvc[s3]==3.42.0
+cryptography<41.0
+
+
+
+# Local package (editable install)
+-e .
