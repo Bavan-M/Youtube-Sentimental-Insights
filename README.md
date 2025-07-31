@@ -36,17 +36,13 @@
 
 ### 5. Open EC2 and Install docker in EC2 Machine:
 #### optinal
-    ```bash
 	sudo apt-get update -y
 	sudo apt-get upgrade
-    ```
 #### required
-    ```bash
 	curl -fsSL https://get.docker.com -o get-docker.sh
 	sudo sh get-docker.sh
 	sudo usermod -aG docker ubuntu
 	newgrp docker
-    ```
 	
 ### 6. Configure EC2 as self-hosted runner:
     setting>actions>runner>new self hosted runner> choose os> then run command one by one
