@@ -3,7 +3,7 @@ import os
 import mlflow
 import logging
 
-mlflow.set_tracking_uri("http://ec2-XX-X-XXX-XXX.ap-south-1.compute.amazonaws.com:5000/")
+mlflow.set_tracking_uri("http://xxx-xx-xxx-xxx-xxx.xx-xxxx-x.compute.amazonaws.com:5000/")
 
 
 logger=logging.getLogger('model_registration')
@@ -52,7 +52,7 @@ def main():
     try:
         model_info_path="experiment_info.json"
         model_info=load_model_info(model_info_path)
-        model_name="youtube_chrome_plugin_model"
+        model_name="youtube_chromes_plugin_model1"
         register_model(model_name,model_info)
     except Exception as e:
         logger.error(f"Failed to complete the model registration {e}")

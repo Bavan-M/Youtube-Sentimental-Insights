@@ -108,8 +108,8 @@ def save_model_info(run_id:str,model_path:str,file_path:str)->None:
         raise
 
 def main():
-    mlflow.set_tracking_uri("http://ec2-XX-X-XXX-XXX.ap-south-1.compute.amazonaws.com:5000/")
-    mlflow.set_experiment("dvc-pipeline-run")
+    mlflow.set_tracking_uri("http://xxx-xx-xxx-xxx-xxx.xx-xxxx-x.compute.amazonaws.com:5000/")
+    mlflow.set_experiment("dvc-pipeline-run1")
     with mlflow.start_run() as run:
         try:
             root_dir=os.path.abspath(os.path.join(os.path.dirname(__file__),"../../"))
@@ -140,8 +140,7 @@ def main():
             )
 
             model_path="lgm_model"
-            artifact_uri = mlflow.get_artifact_uri("lgbm_model")
-            save_model_info(run.info.run_id, artifact_uri, "experiment_info.json")
+            save_model_info(run.info.run_id, model_path, "experiment_info.json")
 
             mlflow.log_artifact(os.path.join(root_dir,"tfidf_vectorizer.pkl"))
             

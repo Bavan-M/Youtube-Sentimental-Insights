@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTube Sentiment Analyzer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 400px;
+      padding: 15px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    .comment-list {
+      list-style-type: decimal;
+      padding-left: 20px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .comment-list li {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h2>YouTube Sentiment Analysis</h2>
+  <input type="text" id="videoUrl" placeholder="Paste YouTube URL here" style="width: 100%; padding: 5px; margin-bottom: 10px;" />
+  <button id="analyzeBtn" style="padding: 8px 12px;">Analyze Sentiment</button>
+
+  <div id="output" class="section">Results will appear here...</div>
+
+  <div id="charts" class="section">
+    <div class="section-title">Sentiment Distribution</div>
+    <img id="pieChart" src="" alt="Pie Chart"/>
+
+    <div class="section-title">Word Cloud</div>
+    <img id="wordCloud" src="" alt="Word Cloud"/>
+
+    <div class="section-title">Sentiment Trend Over Time</div>
+    <img id="trendGraph" src="" alt="Trend Graph"/>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
